@@ -22,7 +22,7 @@ class Song
     artists.uniq
   end
   def self.genre_count
-    Hash[@@genres.collect { |item| [@@genres.count(item), item] }]
+    Hash[@@genres.collect { |item| [item, @@genres.count(item)] }]
   end
   def self.artist_count
     Hash[@@artists.map{|artist| [artist, @@artists.count(artist)]}]
